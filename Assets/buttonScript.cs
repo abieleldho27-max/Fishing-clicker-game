@@ -1,7 +1,9 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using NUnit.Framework;
 public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandler
 {
 
@@ -10,9 +12,10 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     public float timer = 2;
     public GameObject Gauge;
     public GameObject Bar;
-    
-
-   [SerializeField] bool fishing = false;
+    public List<string> fishSpecies = new List<string> { "salmon", "shark", "kraken" };
+    public List<string> fishInInventory;
+   [SerializeField] public bool fishing = false;
+    public bool barOn = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,14 +31,16 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     public void OnPointerDown(PointerEventData eventdata)
     {
         Debug.Log("down");
+        barOn = true;
         Gauge.SetActive(true);
         Bar.SetActive(true);
+        
     }
     public void OnPointerUp(PointerEventData eventdata)
     {
         Debug.Log("UP");
-        Gauge.SetActive(false);
-        Bar.SetActive(false);
+        barOn = false;
+
     }
     public void fish()
     {
@@ -49,8 +54,11 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     {
         yield return new WaitForSeconds(coroutinetimer);
         Debug.Log(coroutinetimer);
-        fishcnt += 1;
-        counter.text = fishcnt.ToString();
+        Gauge.SetActive(false);
+        Bar.SetActive(false);
+        int fishind = Random.Range(0, 3);
+        counter.text = fishSpecies[fishind].ToString();
+        fishInInventory.Add(fishSpecies[fishind]);
         fishing = false;
 
     }

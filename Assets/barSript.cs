@@ -7,6 +7,8 @@ public class barSript : MonoBehaviour
     public float barspeed = 1f;
     public float originalx;
     public float startpos = 0f;
+    public GameObject button;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,10 +23,12 @@ public class barSript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(true)
+        buttonScript buttonscript = button.GetComponent<buttonScript>();
+        if (buttonscript.barOn == true)
         {
             float newx = originalx + Mathf.Sin(Time.time * barspeed) * barlength;
             transform.position = new Vector2(newx, transform.position.y);
+            Debug.Log("barmoving");
         }
     }
 }
