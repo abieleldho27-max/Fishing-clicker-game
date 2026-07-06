@@ -1154,7 +1154,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   button: {fileID: 1048908072}
   inventoryPanelTransform: {fileID: 2083946317}
-  iconPrefab: {fileID: 7853809489899543899, guid: d216100c2c38d4f44abb174450c727ca, type: 3}
+  iconPrefab: {fileID: 727456486341159937, guid: d216100c2c38d4f44abb174450c727ca, type: 3}
+  cmmnInvIcon:
+  - {fileID: 2201635038773661688, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: 2201635038773661688, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: 2201635038773661688, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: 2201635038773661688, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: 2201635038773661688, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  rareInvIcon:
+  - {fileID: -2423229185530918610, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: -2423229185530918610, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: -2423229185530918610, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  epicInvIcon:
+  - {fileID: 3416150400190533875, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  - {fileID: 3416150400190533875, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
+  mythInvIcon:
+  - {fileID: 2623884121805316485, guid: 6e0c844237c1ee2429dfdfe1f6c05fca, type: 3}
   xind: -120
   yind: 11
 --- !u!1 &1048908072
@@ -1307,10 +1322,24 @@ MonoBehaviour:
   timer: 2
   Gauge: {fileID: 556960742}
   Bar: {fileID: 410119051}
-  fishSpecies:
-  - salmon
-  - shark
-  - kraken
+  rareMin: 0
+  epicMin: 0
+  mythMin: 0
+  cmmnfishSpecies:
+  - Salmon
+  - Trout
+  - Mahi Mahi
+  - Mackeral
+  - Cod
+  rarefishSpecies:
+  - Tarpon
+  - Permit
+  - Lionfish
+  epicfishSpecies:
+  - Bull Shark
+  - Swordfish
+  mythfishSpecies:
+  - Kraken
   fishInInventory: []
   fishing: 0
   barOn: 0
