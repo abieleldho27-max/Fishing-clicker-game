@@ -28,7 +28,6 @@ public class barSript : MonoBehaviour
         {
             float newx = originalx + Mathf.Sin(Time.time * barspeed) * barlength;
             transform.position = new Vector2(newx, transform.position.y);
-            Debug.Log("barmoving");
         }
     }
 }

@@ -66,7 +66,7 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     {
         Transform bartransform = Bar.GetComponent<Transform>();
         float barposx = bartransform.transform.position.x;
-        float barmultiplier = 1.1f - barposx;
+        float barmultiplier = 1.1f - Mathf.Abs(barposx);
         if (barmultiplier < 0)
         {
             barmultiplier = 0;
@@ -75,7 +75,6 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
         epicMin = standardEpicMin - (Mathf.RoundToInt(barmultiplier) * 10);
         mythMin = standardMythMin - (Mathf.RoundToInt(barmultiplier));
         yield return new WaitForSeconds(coroutinetimer);
-        Debug.Log(coroutinetimer);
         Gauge.SetActive(false);
         Bar.SetActive(false);
         int listnmb = Random.Range(0, 626);
