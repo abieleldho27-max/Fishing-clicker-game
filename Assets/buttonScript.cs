@@ -12,7 +12,11 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     public float timer = 2;
     public GameObject Gauge;
     public GameObject Bar;
-    public List<string> fishSpecies = new List<string> { "salmon", "shark", "kraken" };
+    public List<string> cmmnfishSpecies = new List<string> { "Salmon", "Trout", "Mahi Mahi", "Mackeral", "Cod" };
+    public List<string> rarefishSpecies = new List<string> { "Tarpon", "Permit", "Lionfish" };
+    public List<string> epicfishSpecies = new List<string> { "Bull Shark", "Swordfish" };
+    public List<string> mythfishSpecies = new List<string> { "Kraken" };
+
     public List<string> fishInInventory;
    [SerializeField] public bool fishing = false;
     public bool barOn = false;
@@ -50,16 +54,46 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
             fishing = true;
         }
     }
-   IEnumerator gofish(float coroutinetimer)
+    IEnumerator gofish(float coroutinetimer)
     {
         yield return new WaitForSeconds(coroutinetimer);
         Debug.Log(coroutinetimer);
         Gauge.SetActive(false);
         Bar.SetActive(false);
-        int fishind = Random.Range(0, 3);
-        counter.text = fishSpecies[fishind].ToString();
-        fishInInventory.Add(fishSpecies[fishind]);
-        fishing = false;
+        int listnmb = Random.Range(0, 626);
+        if (listnmb is < 500 && listnmb is >= 1)
+        {
+            int fishind = Random.Range(1, cmmnfishSpecies.Count);
+            counter.text = cmmnfishSpecies[fishind].ToString();
+            fishInInventory.Add(cmmnfishSpecies[fishind]);
+            fishing = false;
+            Debug.Log(listnmb);
+        }
+        else if (listnmb is < 600 && listnmb is >= 500)
+        {
+            int fishind = Random.Range(1, rarefishSpecies.Count);
+            counter.text = rarefishSpecies[fishind].ToString();
+            fishInInventory.Add(rarefishSpecies[fishind]);
+            fishing = false;
+            Debug.Log(listnmb);
+        }
+        else if (listnmb is < 625 && listnmb is >= 600)
+        {
+            int fishind = Random.Range(1, epicfishSpecies.Count);
+            counter.text = epicfishSpecies[fishind].ToString();
+            fishInInventory.Add(epicfishSpecies[fishind]);
+            fishing = false;
+            Debug.Log(listnmb);
+        }
+        else if (listnmb is < 626 && listnmb is >= 625)
+        {
+            int fishind = Random.Range(1, mythfishSpecies.Count);
+            counter.text = mythfishSpecies[fishind].ToString();
+            fishInInventory.Add(mythfishSpecies[fishind]);
+            fishing = false;
+            Debug.Log(listnmb);
+        }
+        
 
     }
 }

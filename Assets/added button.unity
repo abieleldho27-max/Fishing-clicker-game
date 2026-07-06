@@ -1304,7 +1304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   fishcnt: 0
   counter: {fileID: 197014620}
-  timer: 0
+  timer: 2
   Gauge: {fileID: 556960742}
   Bar: {fileID: 410119051}
   fishSpecies:
