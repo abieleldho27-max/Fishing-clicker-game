@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using NUnit.Framework;
+using Unity.VisualScripting;
 public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandler
 {
 
@@ -12,6 +13,13 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     public float timer = 2;
     public GameObject Gauge;
     public GameObject Bar;
+    private int standardRareMin = 500;
+    private int standardEpicMin = 600;
+    private int standardMythMin = 625;
+    public int rareMin;
+    public int epicMin;
+    public int mythMin;
+
     public List<string> cmmnfishSpecies = new List<string> { "Salmon", "Trout", "Mahi Mahi", "Mackeral", "Cod" };
     public List<string> rarefishSpecies = new List<string> { "Tarpon", "Permit", "Lionfish" };
     public List<string> epicfishSpecies = new List<string> { "Bull Shark", "Swordfish" };
@@ -56,12 +64,22 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
     }
     IEnumerator gofish(float coroutinetimer)
     {
+        Transform bartransform = Bar.GetComponent<Transform>();
+        float barposx = bartransform.transform.position.x;
+        float barmultiplier = 1.1f - barposx;
+        if (barmultiplier < 0)
+        {
+            barmultiplier = 0;
+        }
+        rareMin = standardRareMin - (Mathf.RoundToInt(barmultiplier) * 40);
+        epicMin = standardEpicMin - (Mathf.RoundToInt(barmultiplier) * 10);
+        mythMin = standardMythMin - (Mathf.RoundToInt(barmultiplier));
         yield return new WaitForSeconds(coroutinetimer);
         Debug.Log(coroutinetimer);
         Gauge.SetActive(false);
         Bar.SetActive(false);
         int listnmb = Random.Range(0, 626);
-        if (listnmb is < 500 && listnmb is >= 1)
+        if (listnmb < rareMin && listnmb >= 1)
         {
             int fishind = Random.Range(1, cmmnfishSpecies.Count);
             counter.text = cmmnfishSpecies[fishind].ToString();
@@ -69,7 +87,7 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
             fishing = false;
             Debug.Log(listnmb);
         }
-        else if (listnmb is < 600 && listnmb is >= 500)
+        else if (listnmb < 600 && listnmb >= rareMin)
         {
             int fishind = Random.Range(1, rarefishSpecies.Count);
             counter.text = rarefishSpecies[fishind].ToString();
@@ -77,7 +95,7 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
             fishing = false;
             Debug.Log(listnmb);
         }
-        else if (listnmb is < 625 && listnmb is >= 600)
+        else if (listnmb < 625 && listnmb >= epicMin)
         {
             int fishind = Random.Range(1, epicfishSpecies.Count);
             counter.text = epicfishSpecies[fishind].ToString();
@@ -85,7 +103,7 @@ public class buttonScript : MonoBehaviour,  IPointerDownHandler, IPointerUpHandl
             fishing = false;
             Debug.Log(listnmb);
         }
-        else if (listnmb is < 626 && listnmb is >= 625)
+        else if (listnmb < 626 && listnmb >= mythMin)
         {
             int fishind = Random.Range(1, mythfishSpecies.Count);
             counter.text = mythfishSpecies[fishind].ToString();

@@ -26,6 +26,8 @@ public class UIScript : MonoBehaviour
         else
         {
             inventorypanel.SetActive(true);
+            inventorypanel.SetActive(false);
+            inventorypanel.SetActive(true);
         }
     }
 

@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 60639bba5e5e166429160c41603965a5
+guid: 6e0c844237c1ee2429dfdfe1f6c05fca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5515851078783427038
-    second: New Piskel (10)_0
+      213: 3416150400190533875
+    second: New Piskel (11)_0
   - first:
-      213: -3708664010354139772
-    second: New Piskel (10)_1
+      213: -2423229185530918610
+    second: New Piskel (11)_1
   - first:
-      213: 5316505333109804376
-    second: New Piskel (10)_2
+      213: 2623884121805316485
+    second: New Piskel (11)_2
+  - first:
+      213: 2201635038773661688
+    second: New Piskel (11)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,67 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (10)_0
+      name: New Piskel (11)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5082949, y: 0.53870916}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22e98270ba2c373b0800000000000000
-      internalID: -5515851078783427038
+      spriteID: 3f05aae70ba986f20800000000000000
+      internalID: 3416150400190533875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (10)_1
+      name: New Piskel (11)_1
       rect:
         serializedVersion: 2
         x: 64
         y: 64
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5096773, y: 0.5359442}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48dd09f5bbd288cc0800000000000000
-      internalID: -3708664010354139772
+      spriteID: e29021305e5fe5ed0800000000000000
+      internalID: -2423229185530918610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (10)_2
+      name: New Piskel (11)_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5119936, y: 0.5411205}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85dca72be6508c940800000000000000
-      internalID: 5316505333109804376
+      spriteID: 5816ef3f4b8e96420800000000000000
+      internalID: 2623884121805316485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (11)_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff482b2767cd8e10800000000000000
+      internalID: 2201635038773661688
       vertices: []
       indices: 
       edges: []
@@ -175,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 66a2e0197c8555c48a63a669e866454f
+    spriteID: 769bd752ed44a8547837d486a50375bf
     internalID: 0
     vertices: []
     indices: 
@@ -187,9 +212,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      New Piskel (10)_0: -5515851078783427038
-      New Piskel (10)_1: -3708664010354139772
-      New Piskel (10)_2: 5316505333109804376
+      New Piskel (11)_0: 3416150400190533875
+      New Piskel (11)_1: -2423229185530918610
+      New Piskel (11)_2: 2623884121805316485
+      New Piskel (11)_3: 2201635038773661688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
