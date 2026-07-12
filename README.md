@@ -22,8 +22,9 @@ This is a simple, 2D, pixel art video game where you click buttons to fish. You 
 https://github.com/user-attachments/assets/1c0dce4f-d86d-4b76-bec8-8a83ca9900c8
 
 ## Tools used
-Language | C#
-Editor | Unity
+- Language | C#
+- Editor | Unity
+
 
 ## 
 ## Author 
